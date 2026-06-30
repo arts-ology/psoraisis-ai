@@ -35,7 +35,7 @@ def analyze():
     prob = float(model.predict_proba(patient)[0][1])
     label = get_risk_label(prob)
     return jsonify({
-        "probability": round(prob * 100, 1),
+        "probability": round(prob * 100, 3),
         "label": label
     })
 
